@@ -1,0 +1,36 @@
+﻿@model personaapi_dotnet.Models.Telefono
+
+@{
+    ViewData["Title"] = "Detalles Telefono";
+}
+
+<h1>Detalles Telefono</h1>
+
+<div>
+    <h4>Telefono</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Operador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Operador)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PersonaCedula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PersonaCedula)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Numero">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,49 @@
+﻿@model personaapi_dotnet.Models.Estudio
+
+@{
+    ViewData["Title"] = "Editar Estudio";
+}
+
+<h1>Editar Estudio</h1>
+
+<h4>Estudio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ProfesionId" class="control-label"></label>
+                <input asp-for="ProfesionId" class="form-control" />
+                <span asp-validation-for="ProfesionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonaCedula" class="control-label"></label>
+                <input asp-for="PersonaCedula" class="form-control" />
+                <span asp-validation-for="PersonaCedula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Universidad" class="control-label"></label>
+                <input asp-for="Universidad" class="form-control" />
+                <span asp-validation-for="Universidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
